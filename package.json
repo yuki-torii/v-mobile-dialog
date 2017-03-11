@@ -1,0 +1,60 @@
+{
+  "name": "v-mobile-dialog",
+  "description": "A npm project",
+  "version": "0.0.0",
+  "author": "limichange <limichange@hotmail.com>",
+  "main": "dist/v-mobile-dialog.common.js",
+  "unpkg": "dist/v-mobile-dialog.js",
+  "scripts": {
+    "dev": "node examples/server.js",
+    "dev:dist": "rollup -wm -c build/rollup.config.js",
+    "build": "npm run build:main && npm run build:esm",
+    "build:main": "rollup -c build/rollup.config.js && uglifyjs dist/v-mobile-dialog.js -cm --comments -o dist/v-mobile-dialog.min.js",
+    "build:esm": "rollup -c build/rollup.config.js --environment ESM",
+    "lint": "eslint --ext .js src test/unit/specs"
+  },
+  "license": "MIT",
+  "pre-commit": [
+    "lint"
+  ],
+  "keywords": [
+    "yuki"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "css-loader": "^0.26.4",
+    "eslint": "^3.17.1",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "express": "^4.15.0",
+    "less": "^2.7.2",
+    "less-loader": "^3.0.0",
+    "pre-commit": "^1.1.3",
+    "rollup": "^0.41.4",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-vue": "^2.2.21",
+    "rollup-watch": "^3.2.2",
+    "uglify-js": "^2.7.5",
+    "vue": "^2.2.2",
+    "vue-loader": "^11.1.4",
+    "vue-template-compiler": "^2.2.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-middleware": "^1.10.1",
+    "webpack-hot-middleware": "^2.17.1"
+  },
+  "standard": {
+    "globals": []
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuki-torii/v-mobile-dialog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yuki-torii/v-mobile-dialog/issues"
+  },
+  "homepage": "https://github.com/yuki-torii/v-mobile-dialog#readme"
+}
