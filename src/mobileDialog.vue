@@ -11,17 +11,6 @@
       {{ content }}
     </div>
     <div class="weui-dialog__ft">
-      <a
-        href="javascript:;"
-        class="weui-dialog__btn weui-dialog__btn_default">
-        cancel
-      </a>
-      <a
-        @click="ok"
-        href="javascript:;"
-        class="weui-dialog__btn weui-dialog__btn_primary">
-        ok
-      </a>
     </div>
   </div>
 </div>
